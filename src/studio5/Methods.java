@@ -15,6 +15,8 @@ public class Methods {
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
+		distance = Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
+		
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
 		
 		return distance;
@@ -28,19 +30,23 @@ public class Methods {
 	 * @param radius the radius of the bull's eye
 	 */
 	public static void drawBullsEye(double x, double y, double radius) {
-		StdDraw.setPenColor(StdDraw.BLACK);
-		StdDraw.filledCircle(x, y, radius);
-
+StdDraw.setPenColor(StdDraw.BLACK);
+StdDraw.filledCircle(x, y, 4.0/3.0);
+		
+StdDraw.setPenColor(0, 109, 219);
+StdDraw.filledCircle(x, y, 3.0/4.0);
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
 
-		
+StdDraw.setPenColor(146, 0, 0);
+StdDraw.filledCircle(x, y, 1.0/2.0);
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
 
-		
+StdDraw.setPenColor(255,255,109);
+StdDraw.filledCircle(x, y, 1.0/4.0);
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
@@ -60,7 +66,7 @@ public class Methods {
 	 *         characters in the source String with the replacement String
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
-		String result = "";
+		String result = " ";
 		// TODO: Finish this method
 		
 		return result;
@@ -73,10 +79,15 @@ public class Methods {
 	 * @return the sum of the elements in values
 	 */
 	public static int arraySum(int[] values) {
-		int sum = 0;
+		int sum2 = 0; 
 		// FIXME: Compute the sum of the values in an array
+		for (int sum = 0 ; sum < values.length; sum++) {
+			sum2 = sum2 + values[sum];
+		}
 		
-		return sum;
+				
+				
+		return sum2;
 	}
 
 	/**
@@ -87,7 +98,13 @@ public class Methods {
 	 * @return and array of size that's filled with value
 	 */
 	public static int[] filledArray(int length, int value) {
-		int[] values = null; // FIXME: Create an array of the appropriate size
+		int[] values = new int[length];// FIXME: Create an array of the appropriate size
+		
+		int length2 = 0; 
+		// FIXME: Compute the sum of the values in an array
+		for (length = 0 ;length < values.length; length++) {
+			length2 = length2 + values[length];
+		}
 		// TODO: Finish this method
 
 		
